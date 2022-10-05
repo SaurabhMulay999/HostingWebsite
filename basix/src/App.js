@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom'
 
 import TailWindComponent from './components/TailWindComponent';
 
+//changes made here
+
 function App() {
   const arr=[{
     title:'The veggies',
