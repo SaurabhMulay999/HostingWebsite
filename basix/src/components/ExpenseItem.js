@@ -1,5 +1,6 @@
 import './Expenseitem.css'
 import ExpenseDate from './ExpenseDate';
+import Card from './card'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -11,9 +12,9 @@ function ExpenseItem(props){
     //const day=props.Edate.toLocaleString('en-US',{day:'2-digit'});
     //const year=props.Edate.getFullYear();    
     return(
-        <>
-        <h1 className='text-blue-300'>HIIIIIIIIII</h1>
     
+        
+    <Card className='expense-item'>
         <div className='expense-item'>
             <ExpenseDate Edate={props.Edate}/>
             
@@ -24,7 +25,8 @@ function ExpenseItem(props){
         </div>
 
         </div>
-        </>
+        </Card>
+        
     );
 }
 

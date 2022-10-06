@@ -1,7 +1,7 @@
 import ExpenseItem from './components/ExpenseItem';
 import React from 'react'
 import ReactDOM from 'react-dom'
-
+import Expenses from './components/Expenses';
 import TailWindComponent from './components/TailWindComponent';
 
 //changes made here
@@ -29,7 +29,7 @@ function App() {
 
   return (
   <div>
-      <TailWindComponent/>
+      <Expenses arr={arr}></Expenses>
     </div>
     
 
