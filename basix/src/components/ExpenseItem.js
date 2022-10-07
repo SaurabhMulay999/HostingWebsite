@@ -10,21 +10,32 @@ function ExpenseItem(props){
     //const Eamount=200;
     //const month=props.Edate.toLocaleString('en-US',{month:'long'});
     //const day=props.Edate.toLocaleString('en-US',{day:'2-digit'});
-    //const year=props.Edate.getFullYear();    
+    //const year=props.Edate.getFullYear(); 
+    
+    let TITLE='News';
+    
+    const Clickhere=()=>{
+        TITLE='TV-bilss'
+        console.log(TITLE);
+    }   
+
+
     return(
     
         
     <Card className='expense-item'>
+        <button onClick={Clickhere}>ClickHere</button>
         <div className='expense-item'>
             <ExpenseDate Edate={props.Edate}/>
             
         
         <div className='expense-item__description'>
-            <h2>{props.title}</h2>
+            <h2>{TITLE}</h2>
             <div>${props.Eamount}</div>
         </div>
 
         </div>
+        
         </Card>
         
     );

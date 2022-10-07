@@ -2,11 +2,23 @@ import ExpenseItem from './components/ExpenseItem';
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Expenses from './components/Expenses';
+import NewExpense from './components/NewExpense';
 import TailWindComponent from './components/TailWindComponent';
 
 //changes made here
 
 function App() {
+
+  //we have a handler here to get the data
+  const ExpenseDataHandler=(enteredNewData)=>{
+    const expenseData={
+      ...enteredNewData,
+      id:Math.random().toString()
+      };
+      console.log(expenseData);
+
+  };
+
   const arr=[{
     title:'The veggies',
     Eamount:'1200',
@@ -29,7 +41,8 @@ function App() {
 
   return (
   <div>
-      <Expenses arr={arr}></Expenses>
+    <NewExpense onSavingExpense={ExpenseDataHandler}/>
+    <Expenses arr={arr}></Expenses>
     </div>
     
 
