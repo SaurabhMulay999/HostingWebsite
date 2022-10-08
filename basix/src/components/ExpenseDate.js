@@ -2,10 +2,13 @@ import './ExpenseDate.css';
 import React from 'react'
 import ReactDOM from 'react-dom'
 function ExpenseDate(props){
-    const month=props.Edate.toLocaleString('en-US',{month:'long'});
-    const day=props.Edate.toLocaleString('en-US',{day:'2-digit'});
+    console.log(props.Edate);
+    //const peo=props.Edate.toString().split();
+    
+    const month=props.Edate.toLocaleString({month:'long'});
+    const day=props.Edate.toLocaleString({day:'2-digit'});
     const year=props.Edate.getFullYear();    
-
+    console.log(month);
 
     return (
         <div className="expense-date">

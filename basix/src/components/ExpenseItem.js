@@ -1,5 +1,6 @@
 import './Expenseitem.css'
 import ExpenseDate from './ExpenseDate';
+import Card from './card'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -9,22 +10,34 @@ function ExpenseItem(props){
     //const Eamount=200;
     //const month=props.Edate.toLocaleString('en-US',{month:'long'});
     //const day=props.Edate.toLocaleString('en-US',{day:'2-digit'});
-    //const year=props.Edate.getFullYear();    
-    return(
-        <>
-        <h1 className='text-blue-300'>HIIIIIIIIII</h1>
+    //const year=props.Edate.getFullYear(); 
     
-        <div className='expense-item'>
-            <ExpenseDate Edate={props.Edate}/>
-            
+    let TITLE='News';
+    
+    const Clickhere=()=>{
+        TITLE='TV-bilss'
+        console.log(TITLE);
+    }   
+    const d=props.Edate;
+
+    console.log(props.Edate);
+
+    return(
+    
         
-        <div className='expense-item__description'>
+    <Card className='expense-item'>
+        <ExpenseDate Edate={props.Edate}></ExpenseDate>
+    `<div className='expense-item'>
+            <div className='expense-item__description'>
             <h2>{props.title}</h2>
             <div>${props.Eamount}</div>
-        </div>
+            
+    </div>
 
         </div>
-        </>
+        
+        </Card>
+        
     );
 }
 
