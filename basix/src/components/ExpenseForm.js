@@ -32,8 +32,8 @@ const ExpenseForm=(props)=>{
 
         const expenseData={
             title:enteredTitle,
-            Amount:enteredAmount,
-            EDate:new Date(enteredDate)
+            Eamount:enteredAmount,
+            Edate:new Date(enteredDate)
         };
         //here we are getting the data onsubmit in a expenseData object
         props.onSaveExpenseData(expenseData);

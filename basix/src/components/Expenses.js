@@ -21,10 +21,11 @@ function expenses(props){
         <div className='expense'>
           <Card>  
             <Filter FilterEventHandle={ExpensefilterData}></Filter>
-         <ExpenseItem Edate={props.arr[0].Edate} Eamount={props.arr[0].Eamount} title={props.arr[0].title}/>
-        <ExpenseItem Edate={props.arr[1].Edate} Eamount={props.arr[1].Eamount} title={props.arr[1].title}/> 
-         <ExpenseItem Edate={props.arr[2].Edate} Eamount={props.arr[2].Eamount} title={props.arr[2].title}/>
-         </Card>
+
+            {props.arr.map((expense) => <ExpenseItem Edate={expense.Edate} title={expense.title} Eamount={expense.Eamount}/>)}
+         
+         
+            </Card>
          </div>
         </>
 

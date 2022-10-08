@@ -18,21 +18,21 @@ function ExpenseItem(props){
         TITLE='TV-bilss'
         console.log(TITLE);
     }   
+    const d=props.Edate;
 
+    console.log(props.Edate);
 
     return(
     
         
     <Card className='expense-item'>
-        <button onClick={Clickhere}>ClickHere</button>
-        <div className='expense-item'>
-            <ExpenseDate Edate={props.Edate}/>
-            
-        
-        <div className='expense-item__description'>
-            <h2>{TITLE}</h2>
+        <ExpenseDate Edate={props.Edate}></ExpenseDate>
+    `<div className='expense-item'>
+            <div className='expense-item__description'>
+            <h2>{props.title}</h2>
             <div>${props.Eamount}</div>
-        </div>
+            
+    </div>
 
         </div>
         

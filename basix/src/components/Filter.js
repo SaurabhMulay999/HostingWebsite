@@ -7,7 +7,7 @@ const Filter=(props)=>{
        props.FilterEventHandle(event.target.value);
 
 
-    }
+    };
 
     return(
         <div className='justify-center mx-60 mt-1 animate-pulse'>
